@@ -1,5 +1,5 @@
 #This is a playground project that I created myself based
-# on the freeCodeCamp Ruby tutorial secert word guessing game
+#on the freeCodeCamp Ruby tutorial secert word guessing game
 
 secert_word = "coffee"
 
@@ -21,7 +21,7 @@ puts "--- *Be warned* ---
             1. You only have 5 chances to win 
             2. You may recieve hints by typing 'Hint or 'hint' as a guess"
 
-#Program
+#Game Section
 while guess != secert_word and !out_of_guesses
   if guess_count < guess_limit
     puts "Enter guess: "
@@ -45,7 +45,7 @@ while guess != secert_word and !out_of_guesses
 end
 
 if out_of_guesses
-    puts "You lose!"
+    puts "You lose"
 else
     puts "You won!"
 end
