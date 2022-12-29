@@ -1,7 +1,10 @@
 #This is a playground project that I created myself based
 #on the freeCodeCamp Ruby tutorial secert word guessing game
 
-secret_word = "coffee"
+file = File.open("secret-word.txt", "r")
+
+secret_word = file.read
+
 
 #Handles guess section variables
 guess = ""
