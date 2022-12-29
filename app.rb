@@ -23,11 +23,15 @@ puts "--- *Be warned* ---
 
 #Game Section
 while guess != secert_word and !out_of_guesses
-  if guess_count < guess_limit
+  if guess_count < guess_limit and guess_count != 4
     puts "Enter guess: "
     guess = gets.chomp()
     guess_count += 1
     #Handles obtaining user input and keeps count of guesses
+  elsif guess_count < guess_limit and guess_count == 4
+    puts "Final guess:"
+    guess = gets.chomp()
+    guess_count += 1
   else
     out_of_guesses = true
   end
