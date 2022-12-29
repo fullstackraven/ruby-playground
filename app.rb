@@ -1,7 +1,7 @@
 #This is a playground project that I created myself based
 #on the freeCodeCamp Ruby tutorial secert word guessing game
 
-secert_word = "coffee"
+secret_word = "coffee"
 
 #Handles guess section variables
 guess = ""
@@ -15,14 +15,14 @@ hint_count = 0
 hint_limit = 2
 out_of_hints = false
 
-puts "--- Welcome to the secert word guessing game! ---"
+puts "--- Welcome to the secret word guessing game! ---"
 puts "--- You must answer with the correct word to win ---"
 puts "--- *Be warned* ---
             1. You only have 5 chances to win 
             2. You may recieve hints by typing 'Hint or 'hint' as a guess"
 
 #Game Section
-while guess != secert_word and !out_of_guesses
+while guess != secret_word and !out_of_guesses
   if guess_count < guess_limit and guess_count != 4
     puts "Enter guess: "
     guess = gets.chomp()
