@@ -1,24 +1,26 @@
-#Account object with public methods to display balances and transfer funds, but which rely on private methods #to make sure the user’s PIN (personal identification number) is correct before approving transactions.
+#Banking project
+#Account object with public methods to display balances and transfer funds, but which rely on private methods 
+#to make sure the user’s PIN (personal identification number) is correct before approving transactions.
 
 class Account
-    attr_reader :name
-    attr_reader :balance
-    def initialize(name, balance=100)
-      @name = name
-      @balance = balance
-    end
+  attr_reader :name
+  attr_reader :balance
+  def initialize(name, balance=100)
+    @name = name
+    @balance = balance
+  end
   
-    private
+  private
     def pin
       @pin = 1234
     end
   
-    private
+  private
     def pin_error
       return "Access denied: incorrect PIN."
     end
   
-    public
+  public
     def display_balance(pin_number)
 
       if pin_number == pin
@@ -28,7 +30,7 @@ class Account
       end
     end
   
-    public
+  public
     def withdraw(pin_number, amount)
       if pin_number == pin
         @balance -= amount
@@ -38,7 +40,7 @@ class Account
       end
     end
   
-    public
+  public
     def deposit(pin_number, amount)
       if pin_number == pin
         @balance += amount
