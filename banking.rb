@@ -34,7 +34,7 @@ class Account
     def withdraw(pin_number, amount)
       if pin_number == pin
         @balance -= amount
-        puts "Withdrew #{amount}. New balance: $#{@balance}."
+        puts "Withdrew $#{amount}. New balance: $#{@balance}."
       else
         puts pin_error
       end
@@ -45,14 +45,16 @@ class Account
       if pin_number == pin
         @balance += amount
       else 
-      puts pin_error
+        puts pin_error
       end
     end
 end
 
 my_account = Account.new("Savings", 1_000_000)
+my_account.deposit(1234, 1_000_000)
 my_account.display_balance(1234)
 my_account.withdraw(1234, 500_000)
 my_account.display_balance(1234)
 my_account.withdraw(1234, 500_000)
 my_account.display_balance(1234)
+
