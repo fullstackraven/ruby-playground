@@ -166,7 +166,6 @@ class Intro
   end
 
   def decision1
-    @level = 1
     loop do
       puts " "
       sleep 1
