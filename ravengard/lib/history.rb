@@ -1,5 +1,14 @@
-class History
-  def beginning
+# rubocop:disable Layout/LineLength
+module History
+  def history_intro_script
+    puts "
+
+    You have just been woken by a Ravengard battle commander.\nLegions of armed men and creatures alike are\ngathering in formations around an open field.\nIt's cold. Fresh snow has blanketed you as you slept.\nYou are not sure where you are or how you got here...\n..but it's clear a great battle is beginning...
+
+    "
+  end
+
+  def history_beginning_script
     # Ravengard's Beginnings
     puts "Long ago, in a time when the world was still young, a group of Viking settlers set out to explore the unknown lands beyond their home. They were a hardy people, used to the hardships of the sea and the wilds of the land. They were also a people of magic, for among them were powerful seers and sorcerers who could call upon the spirits of the land and the sea to aid them in their journey."
     sleep 5
@@ -25,7 +34,7 @@ class History
     puts "And so, Ravengard was founded by viking settlers with a unique culture of magic. They were a people who had found a new home, and they were determined to make the most of it. They were a people who would always remember the journey that had brought them to this land, and they were a people who would always honor the magic of Ravengard."
   end
 
-  def great_war
+  def history_great_war_script
     # Start of the Great War
     puts "Ravengard was a land of fierce warriors, rich in tradition, and steeped in the ways of the Viking. The people of Ravengard were proud of their heritage and their fierce spirit. They were a land of warriors, where the men and women alike were trained in the art of battle from a young age."
     sleep 5
@@ -51,3 +60,4 @@ class History
     puts "The Great War may have ended, but the spirit of Ravengard would live on forever. The warriors of Ravengard would always be ready to defend their land, their people, and their way of life. And they would always be remembered as the ones who stood tall and fought for their freedom."
   end
 end
+# rubocop:enable Layout/LineLength
