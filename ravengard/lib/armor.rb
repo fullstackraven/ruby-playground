@@ -1,7 +1,9 @@
 require_relative 'display.rb'
+require_relative 'player.rb'
 
 class ArmorSelection
   include Display
+  include Player
   attr_accessor :armor
 
   def initialize
@@ -78,8 +80,10 @@ class ArmorSelection
     elsif select_more == 'b'
       puts "----------------"
       puts "Saving complete"
-      puts " "
-      puts "Your armor: #{@armor}"
     end
+  end
+
+  def get_armor
+    print @armor.join(', ')
   end
 end
