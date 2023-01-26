@@ -22,10 +22,7 @@ class WeaponSelection
       puts " "
       puts "Choose your battle companion: "
       puts weapon_options 
-      puts " "
-      puts "----------------"
-      sleep 1
-      puts "State your choice:"
+      display_choice
       answer = gets.chomp().downcase.to_s
       puts "----------------"
 

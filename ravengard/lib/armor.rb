@@ -13,15 +13,12 @@ class ArmorSelection
   def armor_error
     puts " "
     puts "No armor selected. Are you sure you want to continue without armor?\n(a) Yes\n(b) No"
-    puts "----------------"
-    sleep 1
-    puts "State your choice:"
+    display_choice
     error_input = gets.chomp.downcase
     if error_input == 'b'
       armor
     else
-      puts "----------------"
-      puts "Saving complete"
+      display_save
     end
   end
 
@@ -32,10 +29,7 @@ class ArmorSelection
     puts " "
     puts "Choose your battle armor: "
     puts armor_options
-    puts " "
-    puts "----------------"
-    sleep 1
-    puts "State your choice:"
+    display_choice
     answer = gets.chomp.downcase.to_s
     puts "----------------"
 
@@ -71,15 +65,12 @@ class ArmorSelection
   def armor_new
     puts " "
     puts "Would you like to select another piece of armor?\n(a) Yes\n(b) No"
-    puts "----------------"
-    sleep 1
-    puts "State your choice:"
+    display_choice
     select_more = gets.chomp.downcase.to_s
     if select_more == 'a'
       armor
     elsif select_more == 'b'
-      puts "----------------"
-      puts "Saving complete"
+      display_save
     end
   end
 
