@@ -1,11 +1,15 @@
 # rubocop:disable Layout/LineLength
 module History
   def history_intro_script
-    puts "
-
-    You have just been woken by a Ravengard battle commander.\nLegions of armed men and creatures alike are\ngathering in formations around an open field.\nIt's cold. Fresh snow has blanketed you as you slept.\nYou are not sure where you are or how you got here...\n..but it's clear a great battle is beginning...
-
-    "
+    puts " "
+    puts "                           *-*-*-*-*-*"
+    sleep 1
+    puts " "
+    puts "You have just been woken by a Ravengard battle commander.\nLegions of armed men and creatures alike are\ngathering in formations around an open field.\nIt's cold. Fresh snow has blanketed you as you slept.\nYou are not sure where you are or how you got here...\n..but it's clear a great battle is beginning..."
+    sleep 1
+    puts " "
+    puts "                           *-*-*-*-*-*"
+    puts " "
   end
 
   def history_beginning_script
@@ -58,6 +62,31 @@ module History
     sleep 5
     puts " "
     puts "The Great War may have ended, but the spirit of Ravengard would live on forever. The warriors of Ravengard would always be ready to defend their land, their people, and their way of life. And they would always be remembered as the ones who stood tall and fought for their freedom."
+  end
+
+  def history_enemy_clan
+    puts "The enemy clan that is at war with Ravengard is called the 'Draugr'. They are a fierce and brutal group of warriors who have a long and bloody history."
+    sleep 5
+    puts " "
+    puts "The Draugr were once a powerful Viking clan, similar to the people of Ravengard. However, they became obsessed with power and conquest. They began raiding and pillaging neighboring lands, taking whatever they wanted and killing anyone who dared to stand in their way."
+    sleep 5
+    puts " "
+    puts "As time passed, the Draugr became more and more ruthless. They began to practice dark and forbidden magic, using it to gain an edge in battle and to terrorize their enemies. They also began to worship dark and evil gods, sacrificing innocent victims to appease them."
+    sleep 5
+    puts " "
+    puts "The Draugr's culture is one of violence and brutality. They see themselves as superior to all other Viking clans and believe that they have the right to conquer and rule over them. They have no regard for human life and will stop at nothing to achieve their goals."
+    sleep 5
+    puts " "
+    puts "The enemy clan is made up of various creatures, some of which are human and some are not. The human warriors of the Draugr are fierce and skilled fighters, and they are feared throughout the land. They are also known to use dark magic to enhance their combat abilities."
+    sleep 5
+    puts " "
+    puts "The Draugr also have a group of undead warriors called the 'Draugr Warriors' they are reanimated corpses of the fallen warriors of the clan, who were sacrificed to the dark gods and brought back to life to serve as unyielding soldiers. These creatures are immune to pain and fear, making them formidable enemies in battle."
+    sleep 5
+    puts " "
+    puts "In addition to the undead warriors, the Draugr are also known to have a group of shape-shifters, who can change their form to resemble animals or other creatures. These shape-shifters are stealthy and deadly, and they are used to infiltrate enemy camps and gather information."
+    sleep 5
+    puts " "
+    puts "Overall, the enemy clan of Draugr is a formidable and dangerous force, driven by a desire for power and conquest. They have a long history of violence and brutality, and they will stop at nothing to defeat the people of Ravengard and claim their land as their own."
   end
 end
 # rubocop:enable Layout/LineLength
