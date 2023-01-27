@@ -11,6 +11,7 @@ module Player
   end
 
   def player_level(level)
+    sleep 1
     puts "Your new level: #{level}"
     puts " "
     puts display_level_hint
