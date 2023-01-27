@@ -1,18 +1,19 @@
 require_relative 'display.rb'
 require_relative 'player.rb'
+require_relative 'intro.rb'
 
-class ArmorSelection
+class ArmorSelection < Intro
   include Display
   include Player
-  attr_accessor :armor
+  attr_accessor :armor, :intro, :name
 
   def initialize
-    @armor = Array.new
+    @armor = []
   end
 
   def armor_error
     puts " "
-    puts "No armor selected. Are you sure you want to continue without armor?\n(a) Yes\n(b) No"
+    puts "No armor selected. Are you sure you want to continue without armor #{@@name}?\n(a) Yes\n(b) No"
     display_choice
     error_input = gets.chomp.downcase
     if error_input == 'b'
@@ -74,7 +75,12 @@ class ArmorSelection
     end
   end
 
-  def get_armor
-    print @armor.join(', ')
+  def show_armor
+    sleep 1
+    puts " "
+    puts "*-*-*-*-*-*"
+    puts "Warrior armor & weapon:"
+    puts " "
+    puts "Armor: #{@armor.join(', ')}"
   end
 end
