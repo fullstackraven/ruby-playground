@@ -1,14 +1,15 @@
 require_relative 'display.rb'
 require_relative 'player.rb'
+require_relative 'intro.rb'
 
-class WeaponSelection
+class WeaponSelection < Intro
   include Display
   include Player
 
-  attr_accessor :weapon
+  attr_accessor :weapon, :intro, :name
 
   def initialize
-    @weapon = Array.new
+    @weapon = nil
   end
 
   def weapon_error
@@ -27,34 +28,34 @@ class WeaponSelection
       puts "----------------"
 
       if answer == 'a'
-        puts "Great choice! You will slay many with this sword."
+        puts "Great choice #{@@name}! You will slay many with this sword."
         answer = 'Sword'
-        @weapon << answer
+        @weapon = answer
         answer = true
       elsif answer == 'b'
-        puts "Great choice! Swing hard and you will take many with this axe."
+        puts "Great choice #{@@name}! Swing hard and you will take many with this axe."
         answer = 'Axe'
-        @weapon << answer
+        @weapon = answer
         answer = true
       elsif answer == 'c'
-        puts "Great choice! Step lightly and take a high ground. You will shoot many with this bow."
+        puts "Great choice#{@@name}! Step lightly and take a high ground. You will shoot many with this bow."
         answer = 'Bow & Arrows'
-        @weapon << answer
+        @weapon = answer
         answer = true
       elsif answer == 'd'
-        puts "Great choice! May your stealth come in handy with these daggers."
+        puts "Great choice #{@@name}! May your stealth come in handy with these daggers."
         answer = 'Dual Daggers'
-        @weapon << answer
+        @weapon = answer
         answer = true
       elsif answer == 'e'
-        puts "Great choice! May your accuracy come in handy with this spear."
+        puts "Great choice #{@@name}! May your accuracy come in handy with this spear."
         answer = 'Spear'
-        @weapon << answer
+        @weapon = answer
         answer = true
       elsif answer == 'f'
-        puts "Great choice! The power within this staff will provide you much assistance in this war."
+        puts "Great choice #{@@name}! The power within this staff will provide you much assistance in this war."
         answer = 'Magic Staff'
-        @weapon << answer
+        @weapon = answer
         answer = true
       else
         weapon_error
@@ -63,11 +64,9 @@ class WeaponSelection
     end
   end
 
-  def get_weapon
-    print @weapon.join(', ')
+  def show_weapon
+    puts "Weapon: #{@weapon}"
+    puts "*-*-*-*-*-*"
+    puts " "
   end
 end
-
-# weapon = WeaponSelection.new
-# weapon.weapon
-# weapon.get_weapon
