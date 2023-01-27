@@ -93,7 +93,7 @@ end
 
 
 
-
+# Keeping for future use in game campaigns
 
 # class ComputerWarrior
 #   include Player
@@ -156,23 +156,3 @@ end
 #   end
 # end
   
-
-# class Warrior
-#   include Display
-#   # include Player
-#   attr_accessor :strength, :health
-
-#   MAX_HEALTH = 120
-
-#   def initialize
-#     @health = [@age * 5, 120].min
-#     @strength = [@age / 2, 10].min
-#   end
-# end
-
-# # player = ComputerWarrior.new
-# # puts "Name: #{player.name}"
-# # puts "Age: #{player.age}"
-# # puts "Health: #{player.health}"
-# # puts "Strength: #{player.strength}"
-# # puts "Background: #{player.background}"
