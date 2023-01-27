@@ -10,7 +10,7 @@ class Intro
   include History
   include Player
 
-  attr_accessor :name, :age, :form, :location, :skill, :level, :health, :strength, :weapon_select, :armor_select
+  attr_accessor :name, :age, :form, :location, :skill, :level, :health, :strength
 
   @@name = nil
   @@age = nil
@@ -20,30 +20,22 @@ class Intro
   @@level = 1
 
   def initialize
-    # @name = nil
-    # @age = nil
-    # @form = nil
-    # @location = nil
-    # @skill = nil
-    # @level = 1
     @health = health 
     @strength = strength 
-    @weapon_select = WeaponSelection.new
-    @armor_select = ArmorSelection.new
-  end
-
-  def play
-    play_intro
-    weapon_select.weapon
-    armor_select.armor
-    display_update(@@level, @@name, @@age, @@form, @@location, @@skill)
-    display_battle_cry
-    display_train_or_join(@@name, @@form, @@level)
   end
 
   def play_intro
     display_intro_graphics
     history_intro_script
     player_intro_prompts
+  end
+
+  def update_intro
+    display_update(@@level, @@name, @@age, @@form, @@location, @@skill)
+  end
+
+  def finish_intro
+    display_battle_cry
+    display_train_or_join(@@name, @@form, @@level)
   end
 end
