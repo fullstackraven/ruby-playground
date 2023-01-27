@@ -164,6 +164,7 @@ module Display
     puts " "
     puts "*-*-*-*-*-*"
     puts "Warrior details & stats:"
+    puts " "
     puts "Level: #{level}"
     puts "Name: #{name}"
     puts "Age: #{age}"
@@ -172,9 +173,6 @@ module Display
     puts "Skills: #{skill}"
     puts "Health: #{player_health}"
     puts "Strength: #{player_strength}"
-    # weapon and armor output are displaying before the placeholder text
-    puts "Weapon: " + weapon_select.get_weapon.to_s
-    puts "Armor: " + armor_select.get_armor.to_s
     puts "*-*-*-*-*-*"
     puts " "
   end
@@ -202,6 +200,7 @@ module Display
   end
 
   def display_level_hint
+    sleep 1
     puts "** Leveling up increases your warriors ability to inflict damage and heal **"
   end
 
