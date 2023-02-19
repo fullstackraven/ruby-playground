@@ -139,6 +139,32 @@ module Display
     end
   end
 
+  def display_campaign_intro
+    puts " "
+    puts "                               ||"
+    puts "                               ||"
+    puts "                               ---"
+    puts "                               | |"
+    puts "                               | |"
+    puts "                               | |"
+    puts "                         (@)==========(@)"
+    puts "                              | | |"
+    puts "                              | | |"
+    puts "                              | | |"
+    puts "                              | | |"
+    puts "                              | | |"
+    puts "                              | | |"
+    puts "                              | | |"
+    puts "                              | | |"
+    puts "                              | | |"
+    puts "                              | | |"
+    puts "                              | | |"
+    puts '                              \ | /'
+    puts '                               \|/'
+    sleep 1
+    puts " "
+  end
+
   # Globally used methods
   def display_age_check(age)
     loop do
@@ -206,6 +232,39 @@ module Display
 
   def display_input_warning
     "\e[31mSorry, that is an invalid answer. Please, try again.\e[0m"
+  end
+
+  def display_direction(direction)
+    cardinal = ''
+    if direction == 'N'
+      cardinal = 'North'
+    elsif direction == 'S'
+      cardinal = 'South'
+    elsif direction == 'E'
+      cardinal = 'East'
+    elsif direction == 'W'
+      cardinal = 'West'
+    end
+
+    if direction != 'O'
+      puts "Heading #{cardinal}"
+      puts "|"
+      sleep 1
+      puts "|"
+      sleep 1
+      puts "|"
+      sleep 1
+      puts "|"
+      sleep 1
+      puts "|"
+      sleep 1
+      puts "|"
+      sleep 1
+      puts "|"
+      sleep 1
+    elsif direction == 'O'
+      puts "Standing your ground"
+    end
   end
 
   # For end of game only

@@ -14,7 +14,6 @@ def play_game
   weapon_select.weapon
   armor_select = ArmorSelection.new
   armor_select.armor
-  intro.update_intro
   armor_select.show_armor
   weapon_select.show_weapon
   intro.finish_intro

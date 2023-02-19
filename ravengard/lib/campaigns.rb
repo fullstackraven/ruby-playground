@@ -1,18 +1,24 @@
+
 require_relative 'display.rb'
 require_relative 'player.rb'
+require_relative 'history.rb'
 
 class CampaignOne 
   include Display
   include Player
+  include History
 
   attr_accessor 
 
   def initialize
-
+    @cells = ['N', 'S', 'E', 'W', 'O']
+    @bio = " "
   end
 
   def introduction
-    
+    # display_campaign_intro
+    history_campaign_intro
+    player_move
   end
 
   def historian
@@ -46,6 +52,10 @@ class CampaignOne
   end
   
 end
+
+# move = CampaignOne.new
+# move.introduction
+
 
 # Outline of Campaign 
 

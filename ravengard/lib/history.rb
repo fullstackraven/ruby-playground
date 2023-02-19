@@ -12,6 +12,34 @@ module History
     puts " "
   end
 
+  def history_campaign_intro
+    puts " "
+    puts "                           *-*-*-*-*-*"
+    sleep 1
+    puts " "
+    puts "As the snow continues to fall on the battlefield, the chaos and destruction is also at war\n with the beauty and serenity of the new fallen snow."
+    puts " " 
+    sleep 10
+    puts "The ground, littered with the bodies of fallen warriors, some still struggling for life."
+    puts " "
+    sleep 8
+    puts "The air, filled with the sounds of clashing swords and battle cries." 
+    puts " "
+    sleep 6
+    puts "You crest a small hill, and see your platoon of warriors, who are dressed and dripping in the red armor of war.\n They sit in a tight circle, awaiting orders to return to the battle front."
+    puts " "
+    sleep 12
+    puts "In the near distance, the enemy clan is visible, as their dark armor and black twisted symbols,\n marking them as the Draugr, scream out against the snow." 
+    puts " "
+    sleep 12
+    puts "The platoon leader arrives back to the circle of warriors to give orders just as you walk up. Leaving no time for introductions.\n You must fight alongside these comrades, using all of your combined skills\n and knowledge to defeat the enemy and protect Ravengard."
+    sleep 1
+    puts " "
+    puts "                           *-*-*-*-*-*"
+    puts " "
+    sleep 5
+  end
+
   def history_beginning_script
     # Ravengard's Beginnings
     puts "Long ago, in a time when the world was still young, a group of Viking settlers set out to explore the unknown lands beyond their home. They were a hardy people, used to the hardships of the sea and the wilds of the land. They were also a people of magic, for among them were powerful seers and sorcerers who could call upon the spirits of the land and the sea to aid them in their journey."
@@ -49,7 +77,7 @@ module History
     puts "The warriors of Ravengard fought bravely, but they were vastly outnumbered. They knew that they could not defeat the enemy alone and they needed help. They sent out a call to their allies, asking for aid in the fight against the invaders."
     sleep 5
     puts " "
-    puts "The call was answered, and soon the warriors of Ravengard were joined by other Viking clans from all over the land. Together, they formed a formidable force and pushed back the enemy."
+    puts "The call was answered, and soon the warriors of Ravengard were joined by other Viking clans and magic creatures from all over the land. Together, they formed a formidable force and pushed back the enemy."
     sleep 5
     puts " "
     puts "The Great War was long and brutal, but the warriors of Ravengard fought with all their might. They fought for their homes, for their families, and for their way of life. They knew that if they lost, there would be no future for them or their people."

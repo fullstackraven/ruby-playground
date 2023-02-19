@@ -57,7 +57,28 @@ module Player
   end
 
   def player_move
-    move = gets.chomp()
+    puts <<-HEREDOC
+         | #{@cells[0]} |
+      ---+---+---
+       #{@cells[3]} | #{@cells[4]} | #{@cells[2]}
+      ---+---+---
+         | #{@cells[1]} |
+    HEREDOC
+    puts " "
+    puts "Choose a direction: "
+    direction = gets.chomp.upcase
+    return direction && display_direction(direction) if valid_move?(direction)
+
+    puts display_input_warning
+    player_move
+  end
+
+  def valid_move?(direction)
+    @cells[0] == direction ||
+    @cells[1] == direction ||
+    @cells[2] == direction ||
+    @cells[3] == direction ||
+    @cells[4] == direction
   end
 
   def player_action
@@ -89,7 +110,6 @@ module Player
     end
   end
 end
-
 
 
 

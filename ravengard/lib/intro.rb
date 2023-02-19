@@ -1,6 +1,7 @@
 # Welcome! You have entered into Ravengard! A simple but fun take on a scripted prompt and answer battle game
 # Do you have what it takes to win the great war?
 # Only the strong will prevail. Good luck!
+
 require_relative 'display.rb'
 require_relative 'history.rb'
 require_relative 'player.rb'
@@ -28,9 +29,6 @@ class Intro
     display_intro_graphics
     history_intro_script
     player_intro_prompts
-  end
-
-  def update_intro
     display_update(@@level, @@name, @@age, @@form, @@location, @@skill)
   end
 
