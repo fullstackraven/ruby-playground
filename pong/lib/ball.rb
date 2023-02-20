@@ -8,7 +8,7 @@ class Ball
 
   def initialize(speed)
     @x = 320
-    @y = rand(100..500)
+    @y = rand(100..400)
     @speed = speed
     @y_velocity = speed
     @x_velocity = [-speed, speed].sample

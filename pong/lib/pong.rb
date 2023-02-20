@@ -22,6 +22,7 @@ multi_player = false
 paused = false
 game_reset = false
 level_selected = false
+display_pause = []
 
 # Create game objects
 player = Paddle.new(:left, 5)
@@ -55,8 +56,6 @@ on :key_down do |event|
       ball_velocity = 12
       level_selected = true
     end
-    ball = Ball.new(ball_velocity)
-    ball_trajectory = BallTrajectory.new(ball)
   end
   # Multi player mode
   if multi_player
@@ -71,8 +70,6 @@ on :key_down do |event|
       ball_velocity = 20
       level_selected = true
     end
-    ball = Ball.new(ball_velocity)
-    ball_trajectory = BallTrajectory.new(ball)
   end
   # Reset game
   if event.key == 'escape'
@@ -105,8 +102,15 @@ on :key_down do |event|
     game_reset = true
   end
   # Pause game
+  pause_image = Image.new('img/paused.png', x: 0, y: 0, width: Window.width, height: Window.height, z: 1)
   if event.key == 'space'
     paused = !paused
+    display_pause << event.key
+    if display_pause.length.odd?
+      pause_image.add
+    elsif display_pause.length.even?
+      pause_image.remove
+    end
   end
 end
 

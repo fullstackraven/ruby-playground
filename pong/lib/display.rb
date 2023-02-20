@@ -8,7 +8,6 @@ class Display
     @level = create_image('img/level.png', 0, 0, Window.width, Window.height, -1)
     @speed = create_image('img/speed.png', 0, 0, Window.width, Window.height, -2)
     @win = create_image('img/win.png', -30, -999, 400, 400, 10)
-    @paused = create_image('img/paused.png', 0, -999, Window.width, Window.height, 1)
     @score_left = create_text("#{player_score}", 230, 5, 50, 'bold', 'white')
     @score_right = create_text("#{opponent_score}", 400, 5, 50, 'bold', 'white')
   end

@@ -7,7 +7,7 @@ class DividingLine
   
     def draw
       NUMBER_OF_LINES.times do |i|
-        Rectangle.new(x: (Window.width + WIDTH) / 2, y: ((Window.height + 10) / NUMBER_OF_LINES) * i, height: HEIGHT, width: WIDTH, color: 'white')
+        Rectangle.new(x: Window.width / 2, y: ((Window.height + 10) / NUMBER_OF_LINES) * i, height: HEIGHT, width: WIDTH, color: 'white')
       end
     end
   end

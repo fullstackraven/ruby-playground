@@ -1,7 +1,7 @@
 # PONG
 Written with the AWESOME [ruby2d](http://www.ruby2d.com/) framework
 
-![PONG]()
+![PONG](lib/img/pong.gif)
 
 ## Goals
 
