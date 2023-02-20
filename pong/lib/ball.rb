@@ -33,11 +33,11 @@ class Ball
       angle = position.clamp(0.2, 0.8) * Math::PI
 
       if paddle.side == :left
-        @x_velocity = Math.sin(angle) * @speed
-        @y_velocity = -Math.cos(angle) * @speed
+          @x_velocity = Math.sin(angle) * @speed
+          @y_velocity = -Math.cos(angle) * @speed
       else
-        @x_velocity = -Math.sin(angle) * @speed
-        @y_velocity = -Math.cos(angle) * @speed
+          @x_velocity = -Math.sin(angle) * @speed
+          @y_velocity = -Math.cos(angle) * @speed
       end
 
       @last_hit_side = paddle.side

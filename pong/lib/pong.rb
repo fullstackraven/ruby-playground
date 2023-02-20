@@ -13,7 +13,7 @@ set title: 'PONG',
     background: 'black'
 
 # Initialize game state
-ball_velocity = 10
+ball_velocity = 1
 last_hit_frame = 0
 player_score = 0
 opponent_score = 0
@@ -25,8 +25,8 @@ level_selected = false
 display_pause = []
 
 # Create game objects
-player = Paddle.new(:left, 5)
-player2 = Paddle.new(:right, 5)
+player = Paddle.new(:left, 8)
+player2 = Paddle.new(:right, 8)
 computer = Paddle.new(:right, 5)
 ball = Ball.new(ball_velocity)
 ball_trajectory = BallTrajectory.new(ball)
@@ -45,15 +45,21 @@ on :key_down do |event|
     case event.key
     when 'e'
       computer.movement_speed = 2
-      ball_velocity = 8
+      ball_velocity = 5
+      ball = Ball.new(ball_velocity)
+      ball_trajectory = BallTrajectory.new(ball)
       level_selected = true
     when 'm'
       computer.movement_speed = 5
       ball_velocity = 10
+      ball = Ball.new(ball_velocity)
+      ball_trajectory = BallTrajectory.new(ball) 
       level_selected = true
     when 'h'
       computer.movement_speed = 10
-      ball_velocity = 12
+      ball_velocity = 15
+      ball = Ball.new(ball_velocity)
+      ball_trajectory = BallTrajectory.new(ball)
       level_selected = true
     end
   end
@@ -62,29 +68,32 @@ on :key_down do |event|
     case event.key
     when 's'
       ball_velocity = 5
+      ball = Ball.new(ball_velocity)
+      ball_trajectory = BallTrajectory.new(ball)
       level_selected = true
     when 'm'
       ball_velocity = 10
+      ball = Ball.new(ball_velocity)
+      ball_trajectory = BallTrajectory.new(ball)
       level_selected = true
     when 'f'
       ball_velocity = 20
+      ball = Ball.new(ball_velocity)
+      ball_trajectory = BallTrajectory.new(ball)
       level_selected = true
     end
   end
   # Reset game
   if event.key == 'escape'
-    ball_velocity = 10
     last_hit_frame = 0
     player_score = 0
     opponent_score = 0
     single_player = false
     multi_player = false
     level_selected = false
-    player = Paddle.new(:left, 5)
-    player2 = Paddle.new(:right, 5)
+    player = Paddle.new(:left, 8)
+    player2 = Paddle.new(:right, 8)
     computer = Paddle.new(:right, 5)
-    ball = Ball.new(ball_velocity)
-    ball_trajectory = BallTrajectory.new(ball)
     divider = DividingLine.new
     paused = false
   end
@@ -95,9 +104,6 @@ on :key_down do |event|
     opponent_score = 0
     ball = Ball.new(ball_velocity)
     ball_trajectory = BallTrajectory.new(ball)
-    player = Paddle.new(:left, 5)
-    player2 = Paddle.new(:right, 5)
-    computer = Paddle.new(:right, 5)
     paused = false
     game_reset = true
   end
